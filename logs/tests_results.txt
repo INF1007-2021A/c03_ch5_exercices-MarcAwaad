@@ -1,0 +1,18 @@
+test_absolute (__main__.TestExercice) ... ok
+test_factorial (__main__.TestExercice) ... ok
+test_prefixes (__main__.TestExercice) ... ok
+test_summation (__main__.TestExercice) ... FAIL
+test_verify_ages (__main__.TestExercice) ... ok
+
+======================================================================
+FAIL: test_summation (__main__.TestExercice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/marcawaad/Documents/GitHub/c03_ch5_exercices-MarcAwaad/test_exercice.py", line 47, in test_summation
+    self.assertEqual(
+AssertionError: 1060 != 24133 : Mauvaise réponse
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=1)

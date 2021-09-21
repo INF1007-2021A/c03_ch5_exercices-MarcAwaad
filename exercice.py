@@ -6,29 +6,90 @@ from typing import List
 
 
 def convert_to_absolute(number: float) -> float:
-    return 0
+    if number >= 0:
+        number = number
+    elif number < 0:
+        number = (-1)*number
+    return number
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
-
-    return [""]
+    List=[]
+    for letter in prefixes:
+        List.append(letter+suffixe)
+    return List
 
 
 def prime_integer_summation() -> int:
-    return 0
+    sum = 2
+    prime_numbers_used=1
+    number = 2
+    while prime_numbers_used < 100:
+        number += 1
+        for index in range(2, number):
+            if number%index!=0:
+                if(number==index+1):
+                    sum += number
+                    prime_numbers_used += 1
+                continue
+            else:
+                break
+    return sum
 
 
 def factorial(number: int) -> int:
-    return 0
+    result = 1
+    for index in range(1, number+1):
+        result *= index
+    return result
 
 
 def use_continue() -> None:
-    pass
+    for index in range (1,11):
+        if index == 5:
+            continue
+        else:
+            print (index)
+    return index
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
-    return []
+    boolean_list = []
+    index_integer = 0
+    for index_list in groups:
+        if len(index_list) > 10 or len(index_list) <= 3:
+            boolean_list.append(False)
+
+        if len(boolean_list)==index_integer:
+            for element in index_list:
+                if element == 25:
+                    boolean_list.append(True)
+                    break
+
+        if len(boolean_list)==index_integer:
+            for element in index_list:
+                if element < 18:
+                    boolean_list.append(False)
+                    break
+        
+        if len(boolean_list)==index_integer:
+            exactement_50_ans = False
+            plus_que_70_ans = False
+            for element in index_list:
+                if element > 70:
+                    plus_que_70_ans = True
+                if element == 50:
+                    exactement_50_ans = True
+            if plus_que_70_ans is True and exactement_50_ans is True:
+                boolean_list.append(False)
+                index_integer += 1
+            else:
+                boolean_list.append(True)
+
+        index_integer += 1
+        
+    return boolean_list
 
 
 def main() -> None:
